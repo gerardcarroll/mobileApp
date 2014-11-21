@@ -2,35 +2,47 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Test App</title>
+  <title>Chain Gang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
   <link href="css/codiqa.ext.min.css" rel="stylesheet">
-  <link href="css/jquery.mobile-1.3.1.min.css" rel="stylesheet">
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.8/jquery.jqplot.min.css" rel="stylesheet">
+  <link href="css/jquery.mobile.theme-1.3.1.min.css" rel="stylesheet">
+  <link href="css/jquery-mobile.css" rel="stylesheet">
+  <link href="css/jquery.mobile.structure-1.3.1.min.css" rel="stylesheet">
+  <link href="css/chain-gang.css" rel="stylesheet">
 
   <script src="js/jquery-1.9.1.min.js"></script>
   <script src="js/jquery.mobile-1.3.1.min.js"></script>
   <script src="js/codiqa.ext.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.8/jquery.jqplot.min.js"></script>
-  <script src="js/test-app.js"></script>
+  <script src="js/chain-gang.js"></script>
 </head>
 <body>
-  <div data-role="page" data-control-title="home" id="page4">
+  <div id="login" data-role="page" data-control-title="Login" data-theme="d">
       <div data-role="content">
-          <a data-role="button" data-transition="flip" href="#page3">
-              Button
-          </a>
-      </div>
-  </div>
-  <div data-role="page" data-control-title="Page2" id="page3">
-      <div data-role="content">
-          <div data-controltype="htmlblock">
-              <div id="chartdiv" style="height:300px;width:200px; ">
+          <div class="#menu" data-controltype="htmlblock">
+              <div class="header" data-role="header" data-theme="b" data-position="fixed">
+                  <!--<a href="index.html#page" style="margin-top:5px; width:60px;">Back</a>-->
+                  <h1 style="margin-top: 15px;">
+                      Chain Gang
+                  </h1>
+                  <a class="ui-btn-right" style="width: 60px; margin-top: 5px;" onclick="menu()"
+                  href="">
+                      Menu
+                  </a>
               </div>
           </div>
+          <h2 class="loginTxt">
+              RideWithGps Login
+          </h2>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input id="txtEmail" type="email" placeholder="Email" value="">
+          </div>
+          <div data-role="fieldcontain" data-controltype="textinput">
+              <input id="txtPassword" type="password" placeholder="Password" value="">
+          </div>
+          <input id="btnSubmit" type="submit" value="Submit" data-theme="b">
       </div>
   </div>
 </body>
