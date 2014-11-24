@@ -19,16 +19,15 @@
   <script src="js/chain-gang.js"></script>
 </head>
 <body>
-  <div id="login" data-role="page" data-control-title="Login" data-theme="d">
+  <div data-role="page" data-control-title="Login" data-theme="a" id="loginPage">
       <div data-role="content">
-          <div class="#menu" data-controltype="htmlblock">
-              <div class="header" data-role="header" data-theme="b" data-position="fixed">
+          <div id="login" data-controltype="htmlblock">
+              <div data-role="header" class="topHeader" data-theme="c" data-position="fixed">
                   <!--<a href="index.html#page" style="margin-top:5px; width:60px;">Back</a>-->
-                  <h1 style="margin-top: 15px;">
+                  <h1 style="margin-top:20px">
                       Chain Gang
                   </h1>
-                  <a class="ui-btn-right" style="width: 60px; margin-top: 5px;" onclick="menu()"
-                  href="">
+                  <a href="" onclick="menu()" class="ui-btn-right menuBtn" style="margin-top:10px; width:72px;">
                       Menu
                   </a>
               </div>
@@ -37,12 +36,77 @@
               RideWithGps Login
           </h2>
           <div data-role="fieldcontain" data-controltype="textinput">
-              <input id="txtEmail" type="email" placeholder="Email" value="">
+              <input name="" id="txtEmail" placeholder="Email" value="" type="email">
           </div>
           <div data-role="fieldcontain" data-controltype="textinput">
-              <input id="txtPassword" type="password" placeholder="Password" value="">
+              <input name="" id="txtPass" placeholder="Password" value="" type="password">
           </div>
-          <input id="btnSubmit" type="submit" value="Submit" data-theme="b">
+          <input type="submit" data-theme="c" value="Submit">
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Routes" data-theme="a" id="page4">
+      <div data-role="content">
+          <div data-controltype="htmlblock">
+              <div data-role="header" class="topHeader" data-theme="c" data-position="fixed">
+                  <a href="" data-icon="back" style="margin-top:10px; width:72px;">
+                      Back
+                  </a>
+                  <h1 style="margin-top:20px">
+                      Chain Gang
+                  </h1>
+                  <a href="" onclick="menu()" class="ui-btn-right menuBtn" style="margin-top:10px; width:72px;">
+                      Menu
+                  </a>
+              </div>
+          </div>
+          <ul id="lstRoutes" data-role="listview" data-divider-theme="c" data-inset="true">
+              <li data-role="list-divider" role="heading">
+                  Your Routes
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Cyclists" data-theme="a" id="page5">
+      <div data-role="content">
+          <div data-controltype="htmlblock">
+              <div data-role="header" class="topHeader" data-theme="c" data-position="fixed">
+                  <a href="" data-icon="back" style="margin-top:10px; width:72px;">
+                      Back
+                  </a>
+                  <h1 style="margin-top:20px">
+                      Chain Gang
+                  </h1>
+                  <a href="" onclick="menu()" class="ui-btn-right menuBtn" style="margin-top:10px; width:72px;">
+                      Menu
+                  </a>
+              </div>
+          </div>
+          <ul id="lstCyclists" data-role="listview" data-divider-theme="c" data-inset="true">
+              <li data-role="list-divider" role="heading">
+                  Cyclists Nearby
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Cyclist" data-theme="a" id="page6">
+      <div data-role="content">
+          <div data-controltype="htmlblock">
+              <div data-role="header" class="topHeader" data-theme="c" data-position="fixed">
+                  <a href="" data-icon="back" style="margin-top:10px; width:72px;">
+                      Back
+                  </a>
+                  <h1 style="margin-top:20px">
+                      Chain Gang
+                  </h1>
+                  <a href="" onclick="menu()" class="ui-btn-right menuBtn" style="margin-top:10px; width:72px;">
+                      Menu
+                  </a>
+              </div>
+          </div>
+          <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
+          data-controltype="image" id="imgCyclist" class="imgCyclist">
+              <img src="https://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+          </div>
       </div>
   </div>
 </body>
