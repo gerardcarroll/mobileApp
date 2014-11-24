@@ -19,19 +19,16 @@
   <script src="js/chain-gang.js"></script>
 </head>
 <body>
-  <div data-role="page" data-control-title="Login" data-theme="a" id="loginPage">
+  <div data-role="page" data-control-title="Login" id="loginPage">
+      <div data-theme="c" data-role="header" data-position="fixed">
+          <a id="btnMenu" data-role="button" data-transition="slide" data-theme="c"
+          href="#loginPage" data-icon="bars" data-iconpos="notext" class="ui-btn-right">
+          </a>
+          <h3>
+              Chain Gang
+          </h3>
+      </div>
       <div data-role="content">
-          <div id="login" data-controltype="htmlblock">
-              <div data-role="header" class="topHeader" data-theme="c" data-position="fixed">
-                  <!--<a href="index.html#page" style="margin-top:5px; width:60px;">Back</a>-->
-                  <h1 style="margin-top:20px">
-                      Chain Gang
-                  </h1>
-                  <a href="" onclick="menu()" class="ui-btn-right menuBtn" style="margin-top:10px; width:72px;">
-                      Menu
-                  </a>
-              </div>
-          </div>
           <h2 class="loginTxt">
               RideWithGps Login
           </h2>
@@ -41,24 +38,61 @@
           <div data-role="fieldcontain" data-controltype="textinput">
               <input name="" id="txtPass" placeholder="Password" value="" type="password">
           </div>
-          <input type="submit" data-theme="c" value="Submit">
+          <a id="btnSubmit" data-role="button" data-transition="slide" href="#homePage">
+              Submit
+          </a>
+          <div data-role="navbar" data-iconpos="top">
+              <ul>
+                  <li>
+                      <a href="#loginPage" data-transition="fade" data-theme="" data-icon="">
+                          Button
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#loginPage" data-transition="fade" data-theme="" data-icon="">
+                          Button
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#loginPage" data-transition="fade" data-theme="" data-icon="arrow-r">
+                          Button
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div data-theme="c" data-role="footer" data-position="fixed">
+          <h3>
+              Footer
+          </h3>
       </div>
   </div>
-  <div data-role="page" data-control-title="Routes" data-theme="a" id="page4">
+  <div data-role="page" data-control-title="Home" id="homePage">
+      <div data-theme="c" data-role="header" data-position="fixed">
+          <a data-role="button" data-transition="slide" data-theme="c" href="#loginPage"
+          data-icon="bars" data-iconpos="notext" class="ui-btn-right">
+          </a>
+          <h3>
+              Chain Gang
+          </h3>
+      </div>
       <div data-role="content">
-          <div data-controltype="htmlblock">
-              <div data-role="header" class="topHeader" data-theme="c" data-position="fixed">
-                  <a href="" data-icon="back" style="margin-top:10px; width:72px;">
-                      Back
-                  </a>
-                  <h1 style="margin-top:20px">
-                      Chain Gang
-                  </h1>
-                  <a href="" onclick="menu()" class="ui-btn-right menuBtn" style="margin-top:10px; width:72px;">
-                      Menu
-                  </a>
-              </div>
-          </div>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Routes" id="routesPage">
+      <div data-theme="c" data-role="header" data-position="fixed">
+          <a id="btnMenu" data-role="button" data-transition="slide" data-theme="c"
+          href="#routesPage" data-icon="bars" data-iconpos="notext" class="ui-btn-right">
+          </a>
+          <a id="btnBack" data-role="button" data-direction="reverse" data-transition="slide"
+          data-theme="c" href="#routesPage" data-icon="back" data-iconpos="notext"
+          class="ui-btn-left">
+          </a>
+          <h3>
+              Chain Gang
+          </h3>
+      </div>
+      <div data-role="content">
           <ul id="lstRoutes" data-role="listview" data-divider-theme="c" data-inset="true">
               <li data-role="list-divider" role="heading">
                   Your Routes
@@ -66,21 +100,19 @@
           </ul>
       </div>
   </div>
-  <div data-role="page" data-control-title="Cyclists" data-theme="a" id="page5">
+  <div data-role="page" data-control-title="Cyclists" id="cyclistsPage">
+      <div data-theme="c" data-role="header" data-position="fixed">
+          <a data-role="button" data-transition="slide" data-theme="c" href="#cyclistsPage"
+          data-icon="bars" data-iconpos="notext" class="ui-btn-right">
+          </a>
+          <a data-role="button" data-direction="reverse" data-transition="slide"
+          href="#cyclistsPage" data-icon="back" data-iconpos="notext" class="ui-btn-left">
+          </a>
+          <h3>
+              Chain Gang
+          </h3>
+      </div>
       <div data-role="content">
-          <div data-controltype="htmlblock">
-              <div data-role="header" class="topHeader" data-theme="c" data-position="fixed">
-                  <a href="" data-icon="back" style="margin-top:10px; width:72px;">
-                      Back
-                  </a>
-                  <h1 style="margin-top:20px">
-                      Chain Gang
-                  </h1>
-                  <a href="" onclick="menu()" class="ui-btn-right menuBtn" style="margin-top:10px; width:72px;">
-                      Menu
-                  </a>
-              </div>
-          </div>
           <ul id="lstCyclists" data-role="listview" data-divider-theme="c" data-inset="true">
               <li data-role="list-divider" role="heading">
                   Cyclists Nearby
@@ -88,25 +120,33 @@
           </ul>
       </div>
   </div>
-  <div data-role="page" data-control-title="Cyclist" data-theme="a" id="page6">
+  <div data-role="page" data-control-title="Cyclist" id="cyclistPage">
+      <div data-theme="c" data-role="header" data-position="fixed">
+          <a data-role="button" data-transition="slide" data-theme="c" href="#cyclistPage"
+          data-icon="bars" data-iconpos="notext" class="ui-btn-right">
+          </a>
+          <a data-role="button" data-direction="reverse" data-transition="slide"
+          data-theme="c" href="#cyclistsPage" data-icon="back" data-iconpos="notext"
+          class="ui-btn-left">
+          </a>
+          <h3>
+              Chain Gang
+          </h3>
+      </div>
       <div data-role="content">
-          <div data-controltype="htmlblock">
-              <div data-role="header" class="topHeader" data-theme="c" data-position="fixed">
-                  <a href="" data-icon="back" style="margin-top:10px; width:72px;">
-                      Back
-                  </a>
-                  <h1 style="margin-top:20px">
-                      Chain Gang
-                  </h1>
-                  <a href="" onclick="menu()" class="ui-btn-right menuBtn" style="margin-top:10px; width:72px;">
-                      Menu
-                  </a>
-              </div>
-          </div>
           <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
           data-controltype="image" id="imgCyclist" class="imgCyclist">
               <img src="https://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
           </div>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Menu" id="menuPage">
+      <div data-theme="c" data-role="header" data-position="fixed">
+          <h3>
+              Chain Gang
+          </h3>
+      </div>
+      <div data-role="content">
       </div>
   </div>
 </body>
