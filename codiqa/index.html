@@ -17,17 +17,27 @@
   <script src="js/jquery.mobile-1.3.1.min.js"></script>
   <script src="js/codiqa.ext.min.js"></script>
   <script src="js/chain-gang.js"></script>
+  
 </head>
 <body>
   <div data-role="page" data-control-title="Login" id="loginPage">
       <div data-theme="c" data-role="header" data-position="fixed">
-          <a id="btnMenu" data-role="button" data-transition="slide" data-theme="c"
-          href="#loginPage" data-icon="bars" data-iconpos="notext" class="ui-btn-right">
+          <a href="#popupMenu" data-rel="popup" data-transition="slideup" id="btnMenu" data-theme="c" data-icon="bars" data-iconpos="notext" class="ui-btn-right">
           </a>
           <h3>
               Chain Gang
           </h3>
       </div>
+                <div data-role="popup" id="popupMenu" data-theme="c">
+                    <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                        <li data-role="list-divider">Choose an action</li>
+                        <li><a href="#">View details</a></li>
+                        <li><a href="#">Edit</a></li>
+                        <li><a href="#">Disable</a></li>
+                        <li><a href="#">Delete</a></li>
+                    </ul>
+                </div>
+                
       <div data-role="content">
           <h2 class="loginTxt">
               RideWithGps Login
@@ -41,48 +51,58 @@
           <a id="btnSubmit" data-role="button" data-transition="slide" href="#homePage">
               Submit
           </a>
-          <div data-role="navbar" data-iconpos="top">
-              <ul>
-                  <li>
-                      <a href="#loginPage" data-transition="fade" data-theme="" data-icon="">
-                          Button
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#loginPage" data-transition="fade" data-theme="" data-icon="">
-                          Button
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#loginPage" data-transition="fade" data-theme="" data-icon="arrow-r">
-                          Button
-                      </a>
-                  </li>
-              </ul>
+          <div>
+              <a href="" data-transition="fade" class="centerText">
+                  Forgot Password?
+              </a>
           </div>
-      </div>
-      <div data-theme="c" data-role="footer" data-position="fixed">
-          <h3>
-              Footer
-          </h3>
       </div>
   </div>
   <div data-role="page" data-control-title="Home" id="homePage">
-      <div data-theme="c" data-role="header" data-position="fixed">
-          <a data-role="button" data-transition="slide" data-theme="c" href="#loginPage"
-          data-icon="bars" data-iconpos="notext" class="ui-btn-right">
+      <div data-theme="c" data-role="header" data-position="fixed" id="contentDiv">
+          <a href="#popupMenu" data-rel="popup" data-transition="slideup" data-theme="c"
+           data-icon="bars" data-iconpos="notext" class="ui-btn-right">
           </a>
           <h3>
               Chain Gang
           </h3>
       </div>
+      <div data-role="popup" id="popupMenu" data-theme="c">
+                    <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                        <li data-role="list-divider">Choose an action</li>
+                        <li><a href="#loginPage">Login</a></li>
+                        <li><a href="#">Edit</a></li>
+                        <li><a href="#">Disable</a></li>
+                        <li><a href="#">Delete</a></li>
+                    </ul>
+                </div>
       <div data-role="content">
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="c">
+          <ul>
+              <li>
+                  <a href="#homePage" data-transition="fade" data-theme="" data-icon="home"
+                  class="ui-btn-active ui-state-persist">
+                      One
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="fade" data-theme="" data-icon="star">
+                      Two
+                  </a>
+              </li>
+              <li>
+                  <a href="#" data-transition="slide" data-theme="" data-icon="home">
+                      Invites
+                  </a>
+              </li>
+          </ul>
       </div>
   </div>
   <div data-role="page" data-control-title="Routes" id="routesPage">
       <div data-theme="c" data-role="header" data-position="fixed">
-          <a id="btnMenu" data-role="button" data-transition="slide" data-theme="c"
-          href="#routesPage" data-icon="bars" data-iconpos="notext" class="ui-btn-right">
+          <a href="#popupMenu" data-rel="popup" data-transition="slideup" data-theme="c"
+           data-icon="bars" data-iconpos="notext" class="ui-btn-right">
           </a>
           <a id="btnBack" data-role="button" data-direction="reverse" data-transition="slide"
           data-theme="c" href="#routesPage" data-icon="back" data-iconpos="notext"
@@ -102,8 +122,7 @@
   </div>
   <div data-role="page" data-control-title="Cyclists" id="cyclistsPage">
       <div data-theme="c" data-role="header" data-position="fixed">
-          <a data-role="button" data-transition="slide" data-theme="c" href="#cyclistsPage"
-          data-icon="bars" data-iconpos="notext" class="ui-btn-right">
+          <a href="#popupMenu" data-rel="popup" data-transition="slideup" data-theme="c" data-icon="bars" data-iconpos="notext" 			class="ui-btn-right">
           </a>
           <a data-role="button" data-direction="reverse" data-transition="slide"
           href="#cyclistsPage" data-icon="back" data-iconpos="notext" class="ui-btn-left">
@@ -122,8 +141,7 @@
   </div>
   <div data-role="page" data-control-title="Cyclist" id="cyclistPage">
       <div data-theme="c" data-role="header" data-position="fixed">
-          <a data-role="button" data-transition="slide" data-theme="c" href="#cyclistPage"
-          data-icon="bars" data-iconpos="notext" class="ui-btn-right">
+          <a href="#popupMenu" data-rel="popup" data-transition="slideup" data-theme="c" data-icon="bars" data-iconpos="notext" class="ui-btn-right">
           </a>
           <a data-role="button" data-direction="reverse" data-transition="slide"
           data-theme="c" href="#cyclistsPage" data-icon="back" data-iconpos="notext"
@@ -151,3 +169,145 @@
   </div>
 </body>
 </html>
+
+<!--
+
+<a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">Actions...</a>
+<div data-role="popup" id="popupMenu" data-theme="c">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+            <li data-role="list-divider">Choose an action</li>
+            <li><a href="#">View details</a></li>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">Disable</a></li>
+            <li><a href="#">Delete</a></li>
+        </ul>
+</div>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" href="jquery.mobile-1.2.0.css" rel="stylesheet">
+
+        <script type="text/javascript" src="jquery-1.8.2.js"></script>
+        <script type="text/javascript" src="jquery.mobile-1.2.0.js"></script>
+
+        <script type="text/javascript">
+            $(document).bind("pageinit", onPageInit);
+
+            //variable to store menu instance
+            newMenu = null;
+
+            function onPageInit()
+            {
+                //create menu. First option in the third argument is menu title
+                createMenu("dynamicMenu1","contentDiv","Menus,menu1,menu2,menu3",menuHandler);
+
+                $("#btnMenu").click(function(){
+                    showMenu(newMenu);
+                });
+            }
+
+            function createMenu(menuId, parentId, options, menuHandler)
+            {
+                //create a containing div
+                var div = $("<div id='" + menuId + "div'></div>").appendTo("#"+parentId).hide();
+
+                //create select tag
+                var menuElm = $("<select id='" + menuId + "' data-inline='true' data-native-menu='false'></select>").appendTo(div);
+
+                //add options
+                var optionsArray = options.split(",");
+                for (var i = 0; i < optionsArray.length; i++)
+                    $("<option>" + optionsArray[i] + "</option>").appendTo("#"+menuId);
+
+                //convert to JQueryMobile menu
+                $("#" + menuId).selectmenu();
+
+                //find custom menu that JQM creates
+                var menus = $(".ui-selectmenu");
+                for (var i = 0; i < menus.length; i++)
+                {
+                    //if ($(menus[i]).children("ul:#" + menuId + "-menu").length > 0)
+                    if ($(menus[i]).children("ul").filter("#" + menuId + "-menu").length > 0)
+                    {
+                        newMenu = $(menus[i]);
+                        break;
+                    }
+                }
+
+                //Hack for JQM 1.2 - check if parent of select menu is ui-popup-container
+                var menuContainer = $(menus).parent(".ui-popup-container");
+                if (menuContainer.length > 0)
+                {
+                    var pageElm = menuContainer.parent("div[data-role='page']");
+                    if (pageElm.length > 0) 
+                    {
+                        menus.detach();
+                        menuContainer.remove();
+                        pageElm.append(menus);
+                        menus.css("width", "80%");
+                        menus.css("max-width", "350px");
+                    }
+                } 
+
+                if (newMenu == null)
+                {
+                    alert("Error creating menu");
+                    return;
+                }
+
+                //Associate click handler with menu items, i.e. anchor tags
+                $(newMenu).find(".ui-selectmenu-list li a").click(menuHandler);    
+
+                //Add Close option
+                var menuHeader = $(newMenu).find(".ui-header");
+                var closeLinkId = menuId + "_close_id";
+                menuHeader.prepend("<span style='position:relative;float:left'>" +
+                    "<a href='#' id='" + closeLinkId + "'>X</href></span>");  
+                $("#" + closeLinkId).click(function(e){
+                    newMenu.hide();
+                });
+
+                return newMenu.hide();
+            }
+
+            function showMenu(menu)
+            {
+                if (menu == null)
+                    return;
+
+                //show menu at center of the window
+                var left = ($(window).width() - $(menu).width()) / 2;
+                //consider vertical scrolling when calculating top
+                var top = (($(window).height() - $(menu).height()) / 2) + $(window).scrollTop();
+                $(menu).css({
+                    left: left,
+                    top: top
+                });
+
+                $(menu).show();
+            }
+
+            //Callback handler when menu item is clicked
+            function menuHandler(event)
+            {
+                if (newMenu != null)
+                    $(newMenu).hide();
+
+                alert(event.srcElement.text);                    
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <div data-role="page" >
+            <div data-role="content" id="contentDiv">
+                <a href="" data-role="button" data-inline="true" id="btn1">Show Menu</a>
+            </div>
+            <span style='position:relative;float:left'></span>
+        </div>
+
+    </body>
+</html>
+-->
