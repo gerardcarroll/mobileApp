@@ -5,11 +5,12 @@ var user = {Id:"", Name:"", Auth:"", TotDist:"", TotEle:"", Img:""};
                 var plot;
                 
                 var gradient = [];
-                var gradient2 = [];          
-                
-                $("#txtEmail").text("s00009509@mail.itsligo.ie");
-                $("#txtPass").text("12345");    			        					
-                
+                var gradient2 = [];  
+            	
+        		$( document ).on( "pageshow", "#loginPage", function() {
+                	$("#txtEmail").val("s00009509@mail.itsligo.ie");
+                	$("#txtPass").val("12345");			
+                });  
                 
                 $( document ).on( "click", "#btnSignOut", function() {
                    alert(user.Id);
@@ -142,10 +143,11 @@ var user = {Id:"", Name:"", Auth:"", TotDist:"", TotEle:"", Img:""};
                 					$.mobile.loading( 'hide', {});						
                 				},
                 				success: function (result) {
+        							var bounds = new google.maps.LatLngBounds();
                 					route.Name = result.route.name;
                 					var mapOptions = {
-                					zoom: 12,
-                					center: new google.maps.LatLng(result.route.track_points[0].y, result.route.track_points[0].x),
+                					/*zoom: 12,
+                					center: new google.maps.LatLng(result.route.track_points[0].y, result.route.track_points[0].x),*/
                 					mapTypeId: google.maps.MapTypeId.TERRAIN
                 				  };
                 				
@@ -155,6 +157,7 @@ var user = {Id:"", Name:"", Auth:"", TotDist:"", TotEle:"", Img:""};
                 					var elevDist = 0;
                 				for(var i = 0; i < result.route.track_points.length; i++)
                 				{
+        							bounds.extend(new google.maps.LatLng(result.route.track_points[i].y, result.route.track_points[i].x));
                 					routeCoordinates.push(new google.maps.LatLng(result.route.track_points[i].y, result.route.track_points[i].x));
                 					if(result.route.track_points[i].d == undefined)
                 					{
@@ -177,8 +180,9 @@ var user = {Id:"", Name:"", Auth:"", TotDist:"", TotEle:"", Img:""};
                 					strokeOpacity: 1.0,
                 					strokeWeight: 2
                 				  });
-                				
-                				  cyclePath.setMap(map);	
+        						  
+                					map.fitBounds(bounds);
+                				  	cyclePath.setMap(map);	
                 														
                 				  
                 				},

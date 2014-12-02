@@ -33,17 +33,17 @@
     	}
     	.lblUserName{
     		display: block;
-    		font-size:x-large;
+    		font-size:medium;
     		padding-bottom: 20px;
     	}
     	.lblUserDist{
     		display: block;
-    		font-size:large;
+    		font-size:medium;
     		padding-bottom: 10px;
     	}
     	.lblUserElev{
     		display: block;
-    		font-size:large;		
+    		font-size:medium;		
     	}
         .btnViewProf{
             margin-top:375px;
