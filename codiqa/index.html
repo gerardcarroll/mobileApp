@@ -17,297 +17,390 @@
   <script src="js/jquery.mobile-1.3.1.min.js"></script>
   <script src="js/codiqa.ext.min.js"></script>
   <script src="js/chain-gang.js"></script>
-  
+  <style>
+      html, body { height:100%; }
+  </style>
+
 </head>
-<body>
-  <div data-role="page" data-control-title="Login" id="loginPage">
-      <div data-theme="c" data-role="header" data-position="fixed">
-          <a href="#popupMenu" data-rel="popup" data-transition="slideup" id="btnMenu" data-theme="c" data-icon="bars" data-iconpos="notext" class="ui-btn-right">
-          </a>
-          <h3>
-              Chain Gang
-          </h3>
-      </div>
-                <div data-role="popup" id="popupMenu" data-theme="c">
-                    <ul data-role="listview" data-inset="true" style="min-width:210px;">
-                        <li data-role="list-divider">Choose an action</li>
-                        <li><a href="#">View details</a></li>
-                        <li><a href="#">Edit</a></li>
-                        <li><a href="#">Disable</a></li>
-                        <li><a href="#">Delete</a></li>
-                    </ul>
-                </div>
-                
+<body style="height:100%">
+  <div id="loginPage" data-role="page" data-control-title="Login">
       <div data-role="content">
-          <h2 class="loginTxt">
+          <div data-controltype="htmlblock">
+              <div data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-right" id="btnMenu" href="#loginPopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
+                  </a>
+                  <h3>
+                      Chain Gang
+                  </h3>
+              </div>
+              <div class="popupCenter" id="loginPopupMenu" data-role="popup" data-theme="c">
+                  <!--<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow
+                  ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>-->
+                  <ul style="min-width: 210px;" data-role="listview" data-theme="c" data-inset="true">
+                      <li data-role="list-divider">
+                          Choose an option
+                      </li>
+                      <li>
+                          <a href="#HomePage" data-transition="flip">
+                              Home
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#RoutesPage" data-transition="flip">
+                              Routes
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#FriendsPage" data-transition="flip">
+                              Friends
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#CyclistsPage" data-transition="flip">
+                              Find Cyclists
+                          </a>
+                      </li>
+                      <li>
+                          <a id="btnSignOut" href="#">
+                              Sign Out
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <h2 class="centerText">
               RideWithGps Login
           </h2>
           <div data-role="fieldcontain" data-controltype="textinput">
-              <input name="" id="txtEmail" placeholder="Email" value="" type="email">
+              <input id="txtEmail" type="email" placeholder="Email" value="">
           </div>
           <div data-role="fieldcontain" data-controltype="textinput">
-              <input name="" id="txtPass" placeholder="Password" value="" type="password">
+              <input id="txtPass" type="password" placeholder="Password" value="">
           </div>
-          <a id="btnSubmit" data-role="button" data-transition="slide" href="#homePage">
-              Submit
-          </a>
+          <input id="btnLogin" type="submit" value="Submit" data-theme="c">
           <div>
-              <a href="" data-transition="fade" class="centerText">
+              <a class="centerText" href="http://ridewithgps.com" data-transition="slideup">
                   Forgot Password?
               </a>
           </div>
       </div>
   </div>
-  <div data-role="page" data-control-title="Home" id="homePage">
-      <div data-theme="c" data-role="header" data-position="fixed" id="contentDiv">
-          <a href="#popupMenu" data-rel="popup" data-transition="slideup" data-theme="c"
-           data-icon="bars" data-iconpos="notext" class="ui-btn-right">
-          </a>
-          <h3>
-              Chain Gang
-          </h3>
-      </div>
-      <div data-role="popup" id="popupMenu" data-theme="c">
-                    <ul data-role="listview" data-inset="true" style="min-width:210px;">
-                        <li data-role="list-divider">Choose an action</li>
-                        <li><a href="#loginPage">Login</a></li>
-                        <li><a href="#">Edit</a></li>
-                        <li><a href="#">Disable</a></li>
-                        <li><a href="#">Delete</a></li>
-                    </ul>
-                </div>
+  <div id="HomePage" data-role="page" data-control-title="Home">
       <div data-role="content">
-      </div>
-      <div data-role="tabbar" data-iconpos="top" data-theme="c">
-          <ul>
-              <li>
-                  <a href="#homePage" data-transition="fade" data-theme="" data-icon="home"
-                  class="ui-btn-active ui-state-persist">
-                      One
+          <div data-controltype="htmlblock">
+              <div data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-right" id="btnMenu" href="#HomePopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
                   </a>
-              </li>
-              <li>
-                  <a href="#" data-transition="fade" data-theme="" data-icon="star">
-                      Two
-                  </a>
-              </li>
-              <li>
-                  <a href="#" data-transition="slide" data-theme="" data-icon="home">
-                      Invites
-                  </a>
-              </li>
-          </ul>
+                  <h3>
+                      Chain Gang
+                  </h3>
+              </div>
+              <div class="popupCenter" id="HomePopupMenu" data-role="popup" data-theme="c">
+                  <!--<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow
+                  ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>-->
+                  <ul style="min-width: 210px;" data-role="listview" data-theme="c" data-inset="true">
+                      <li data-role="list-divider">
+                          Choose an Option
+                      </li>
+                      <li>
+                          <a href="#" data-transition="flip">
+                              Home
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#RoutesPage" data-transition="flip">
+                              Routes
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#FriendsPage" data-transition="flip">
+                              Friends
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#CyclistsPage" data-transition="flip">
+                              Find Cyclists
+                          </a>
+                      </li>
+                      <li>
+                          <a id="btnSignOut" href="#">
+                              Sign Out
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
       </div>
   </div>
-  <div data-role="page" data-control-title="Routes" id="routesPage">
-      <div data-theme="c" data-role="header" data-position="fixed">
-          <a href="#popupMenu" data-rel="popup" data-transition="slideup" data-theme="c"
-           data-icon="bars" data-iconpos="notext" class="ui-btn-right">
-          </a>
-          <a id="btnBack" data-role="button" data-direction="reverse" data-transition="slide"
-          data-theme="c" href="#routesPage" data-icon="back" data-iconpos="notext"
-          class="ui-btn-left">
-          </a>
-          <h3>
-              Chain Gang
-          </h3>
-      </div>
+  <div id="RoutesPage" data-role="page" data-control-title="Routes">
       <div data-role="content">
-          <ul id="lstRoutes" data-role="listview" data-divider-theme="c" data-inset="true">
-              <li data-role="list-divider" role="heading">
-                  Your Routes
-              </li>
-          </ul>
+          <div data-controltype="htmlblock">
+              <div data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-right" id="btnMenu" href="#RoutesPopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
+                  </a>
+                  <h3>
+                      Chain Gang
+                  </h3>
+              </div>
+              <div class="popupCenter" id="RoutesPopupMenu" data-role="popup" data-theme="c">
+                  <!--<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow
+                  ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>-->
+                  <ul style="min-width: 210px;" data-role="listview" data-theme="c" data-inset="true">
+                      <li data-role="list-divider">
+                          Choose an Option
+                      </li>
+                      <li>
+                          <a href="#HomePage" data-transition="flip">
+                              Home
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" data-transition="flip">
+                              Routes
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#FriendsPage" data-transition="flip">
+                              Friends
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#CyclistsPage" data-transition="flip">
+                              Find Cyclists
+                          </a>
+                      </li>
+                      <li>
+                          <a id="btnSignOut" onclick="SignOut();" href="#">
+                              Sign Out
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div data-controltype="htmlblock">
+              <ul id="lstRoutes" data-role="listview" data-inset="true" data-divider-theme="c">
+              </ul>
+          </div>
       </div>
   </div>
-  <div data-role="page" data-control-title="Cyclists" id="cyclistsPage">
-      <div data-theme="c" data-role="header" data-position="fixed">
-          <a href="#popupMenu" data-rel="popup" data-transition="slideup" data-theme="c" data-icon="bars" data-iconpos="notext" 			class="ui-btn-right">
-          </a>
-          <a data-role="button" data-direction="reverse" data-transition="slide"
-          href="#cyclistsPage" data-icon="back" data-iconpos="notext" class="ui-btn-left">
-          </a>
-          <h3>
-              Chain Gang
-          </h3>
-      </div>
+  <div id="CyclistsPage" data-role="page" data-control-title="Cyclists">
       <div data-role="content">
-          <ul id="lstCyclists" data-role="listview" data-divider-theme="c" data-inset="true">
-              <li data-role="list-divider" role="heading">
+          <div data-controltype="htmlblock">
+              <div data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-right" id="btnMenu" href="#CyclistsPopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
+                  </a>
+                  <h3>
+                      Chain Gang
+                  </h3>
+              </div>
+              <div class="popupCenter" id="CyclistsPopupMenu" data-role="popup" data-theme="c">
+                  <!--<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow
+                  ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>-->
+                  <ul style="min-width: 210px;" data-role="listview" data-theme="c" data-inset="true">
+                      <li data-role="list-divider">
+                          Choose an Option
+                      </li>
+                      <li>
+                          <a href="#HomePage" data-transition="flip">
+                              Home
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#RoutesPage" data-transition="flip">
+                              Routes
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#FriendsPage" data-transition="flip">
+                              Friends
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" data-transition="flip">
+                              Find Cyclists
+                          </a>
+                      </li>
+                      <li>
+                          <a id="btnSignOut" href="#">
+                              Sign Out
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <ul id="lstCyclists" data-role="listview" data-inset="true" data-divider-theme="c">
+              <li role="heading" data-role="list-divider">
                   Cyclists Nearby
               </li>
           </ul>
       </div>
   </div>
-  <div data-role="page" data-control-title="Cyclist" id="cyclistPage">
-      <div data-theme="c" data-role="header" data-position="fixed">
-          <a href="#popupMenu" data-rel="popup" data-transition="slideup" data-theme="c" data-icon="bars" data-iconpos="notext" class="ui-btn-right">
-          </a>
-          <a data-role="button" data-direction="reverse" data-transition="slide"
-          data-theme="c" href="#cyclistsPage" data-icon="back" data-iconpos="notext"
-          class="ui-btn-left">
-          </a>
-          <h3>
-              Chain Gang
-          </h3>
-      </div>
+  <div id="CyclistPage" data-role="page" data-control-title="Cyclist">
       <div data-role="content">
-          <div style="width: 100px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
-          data-controltype="image" id="imgCyclist" class="imgCyclist">
-              <img src="https://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+          <div data-controltype="htmlblock">
+              <div data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-left" href="#CyclistsPage" data-role="button" data-theme="c"
+                  data-iconpos="notext" data-icon="back" data-transition="slide" data-direction="reverse">
+                  </a>
+                  <a class="ui-btn-right" id="btnMenu" href="#HomePopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
+                  </a>
+                  <h3>
+                      Chain Gang
+                  </h3>
+              </div>
+              <div class="popupCenter" id="HomePopupMenu" data-role="popup" data-theme="c">
+                  <!--<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow
+                  ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>-->
+                  <ul style="min-width: 210px;" data-role="listview" data-theme="c" data-inset="true">
+                      <li data-role="list-divider">
+                          Choose an Option
+                      </li>
+                      <li>
+                          <a href="#" data-transition="flip">
+                              Home
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#RoutesPage" data-transition="flip">
+                              Routes
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#FriendsPage" data-transition="flip">
+                              Friends
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#CyclistsPage" data-transition="flip">
+                              Find Cyclists
+                          </a>
+                      </li>
+                      <li>
+                          <a id="btnSignOut" href="#">
+                              Sign Out
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="imgCyclist" id="imgCyclist" style="border: 1px solid rgb(184, 184, 184); border-image: none; width: 100px; height: 100px; position: relative; background-color: rgb(251, 251, 251);"
+          data-controltype="image">
+              <img style="left: 50%; top: 50%; margin-top: -18px; margin-left: -16px; position: absolute;"
+              alt="image" src="https://codiqa.com/static/images/v2/image.png">
           </div>
       </div>
   </div>
-  <div data-role="page" data-control-title="Menu" id="menuPage">
-      <div data-theme="c" data-role="header" data-position="fixed">
-          <h3>
-              Chain Gang
-          </h3>
-      </div>
+  <div id="FriendsPage" data-role="page" data-control-title="Friends">
       <div data-role="content">
+          <div data-controltype="htmlblock">
+              <div data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-right" id="btnMenu" href="#FriendsPopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
+                  </a>
+                  <h3>
+                      Chain Gang
+                  </h3>
+              </div>
+              <div class="popupCenter" id="FriendsPopupMenu" data-role="popup" data-theme="c">
+                  <!--<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow
+                  ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>-->
+                  <ul style="min-width: 210px;" data-role="listview" data-theme="c" data-inset="true">
+                      <li data-role="list-divider">
+                          Choose an Option
+                      </li>
+                      <li>
+                          <a href="#HomePage" data-transition="flip">
+                              Home
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#RoutesPage" data-transition="flip">
+                              Routes
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" data-transition="flip">
+                              Friends
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#CyclistsPage" data-transition="flip">
+                              Find Cyclists
+                          </a>
+                      </li>
+                      <li>
+                          <a id="btnSignOut" href="#">
+                              Sign Out
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div id="RouteDetailPage" data-role="page" style="height:100%" data-control-title="Route Detail">
+      <div data-role="content" style="height:100%">
+          <div data-controltype="htmlblock">
+              <div data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-right" id="btnMenu" href="#RouteDetailPopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
+                  </a>
+                  <h3>
+                      Chain Gang
+                  </h3>
+              </div>
+              <div class="popupCenter" id="RouteDetailPopupMenu" data-role="popup" data-theme="c">
+                  <!--<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow
+                  ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>-->
+                  <ul style="min-width: 210px;" data-role="listview" data-theme="c" data-inset="true">
+                      <li data-role="list-divider">
+                          Choose an Option
+                      </li>
+                      <li>
+                          <a href="#" data-transition="flip">
+                              Home
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#RoutesPage" data-transition="flip">
+                              Routes
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#FriendsPage" data-transition="flip">
+                              Friends
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#CyclistsPage" data-transition="flip">
+                              Find Cyclists
+                          </a>
+                      </li>
+                      <li>
+                          <a id="btnSignOut" href="#">
+                              Sign Out
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div data-controltype="htmlblock" style="height:100%">
+              <div id="map-canvas" style="margin: 0px; padding: 0px; height: 100%;">
+              </div>
+          </div>
       </div>
   </div>
 </body>
 </html>
-
-<!--
-
-<a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">Actions...</a>
-<div data-role="popup" id="popupMenu" data-theme="c">
-        <ul data-role="listview" data-inset="true" style="min-width:210px;">
-            <li data-role="list-divider">Choose an action</li>
-            <li><a href="#">View details</a></li>
-            <li><a href="#">Edit</a></li>
-            <li><a href="#">Disable</a></li>
-            <li><a href="#">Delete</a></li>
-        </ul>
-</div>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <link type="text/css" href="jquery.mobile-1.2.0.css" rel="stylesheet">
-
-        <script type="text/javascript" src="jquery-1.8.2.js"></script>
-        <script type="text/javascript" src="jquery.mobile-1.2.0.js"></script>
-
-        <script type="text/javascript">
-            $(document).bind("pageinit", onPageInit);
-
-            //variable to store menu instance
-            newMenu = null;
-
-            function onPageInit()
-            {
-                //create menu. First option in the third argument is menu title
-                createMenu("dynamicMenu1","contentDiv","Menus,menu1,menu2,menu3",menuHandler);
-
-                $("#btnMenu").click(function(){
-                    showMenu(newMenu);
-                });
-            }
-
-            function createMenu(menuId, parentId, options, menuHandler)
-            {
-                //create a containing div
-                var div = $("<div id='" + menuId + "div'></div>").appendTo("#"+parentId).hide();
-
-                //create select tag
-                var menuElm = $("<select id='" + menuId + "' data-inline='true' data-native-menu='false'></select>").appendTo(div);
-
-                //add options
-                var optionsArray = options.split(",");
-                for (var i = 0; i < optionsArray.length; i++)
-                    $("<option>" + optionsArray[i] + "</option>").appendTo("#"+menuId);
-
-                //convert to JQueryMobile menu
-                $("#" + menuId).selectmenu();
-
-                //find custom menu that JQM creates
-                var menus = $(".ui-selectmenu");
-                for (var i = 0; i < menus.length; i++)
-                {
-                    //if ($(menus[i]).children("ul:#" + menuId + "-menu").length > 0)
-                    if ($(menus[i]).children("ul").filter("#" + menuId + "-menu").length > 0)
-                    {
-                        newMenu = $(menus[i]);
-                        break;
-                    }
-                }
-
-                //Hack for JQM 1.2 - check if parent of select menu is ui-popup-container
-                var menuContainer = $(menus).parent(".ui-popup-container");
-                if (menuContainer.length > 0)
-                {
-                    var pageElm = menuContainer.parent("div[data-role='page']");
-                    if (pageElm.length > 0) 
-                    {
-                        menus.detach();
-                        menuContainer.remove();
-                        pageElm.append(menus);
-                        menus.css("width", "80%");
-                        menus.css("max-width", "350px");
-                    }
-                } 
-
-                if (newMenu == null)
-                {
-                    alert("Error creating menu");
-                    return;
-                }
-
-                //Associate click handler with menu items, i.e. anchor tags
-                $(newMenu).find(".ui-selectmenu-list li a").click(menuHandler);    
-
-                //Add Close option
-                var menuHeader = $(newMenu).find(".ui-header");
-                var closeLinkId = menuId + "_close_id";
-                menuHeader.prepend("<span style='position:relative;float:left'>" +
-                    "<a href='#' id='" + closeLinkId + "'>X</href></span>");  
-                $("#" + closeLinkId).click(function(e){
-                    newMenu.hide();
-                });
-
-                return newMenu.hide();
-            }
-
-            function showMenu(menu)
-            {
-                if (menu == null)
-                    return;
-
-                //show menu at center of the window
-                var left = ($(window).width() - $(menu).width()) / 2;
-                //consider vertical scrolling when calculating top
-                var top = (($(window).height() - $(menu).height()) / 2) + $(window).scrollTop();
-                $(menu).css({
-                    left: left,
-                    top: top
-                });
-
-                $(menu).show();
-            }
-
-            //Callback handler when menu item is clicked
-            function menuHandler(event)
-            {
-                if (newMenu != null)
-                    $(newMenu).hide();
-
-                alert(event.srcElement.text);                    
-            }
-        </script>
-
-    </head>
-
-    <body>
-        <div data-role="page" >
-            <div data-role="content" id="contentDiv">
-                <a href="" data-role="button" data-inline="true" id="btn1">Show Menu</a>
-            </div>
-            <span style='position:relative;float:left'></span>
-        </div>
-
-    </body>
-</html>
--->

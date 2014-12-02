@@ -1,17 +1,9 @@
-.loginTxt {
+.centerText {
      text-align:center;  
-     margin-top:40px;
-        
+     margin-top:40px;    
     }
     
-    /*.topHeader {
-        height:50px;
-        margin-left:-15px;
-        margin-right:0px;
-        margin-top:-15px;
-    }*/
-    
-    /*.imgCyclist{
-        margin-top:10px;
-        
-    }*/
+    .popupCenter {    
+        margin-left: auto;
+        margin-right: auto;
+    }
