@@ -1,24 +1,51 @@
 .centerText {
-     text-align:center;  
-     margin-top:40px;    
-    }
-    
-    .popupCenter {    
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .mainHeader{
         
-        background: #f70; 
-        text-shadow: none;
-    
-    }
-    
-    .routes{
-        background: #A2C4C9;
-		text-shadow: none;
-    }
-	.routes2{
-		
-	}
+        text-align:center;  
+        margin-top:40px;    
+        }
+        
+        .popupCenter {    
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .mainHeader{
+            
+            background: #f70; 
+            text-shadow: none;
+        
+        }
+        
+        .routes{
+            background: #A2C4C9;
+        	text-shadow: none;
+        }
+    	.routes2{
+    		
+    	}
+    	
+    	.imgDiv{
+    		float:left;	
+    	}
+    	.lblDiv{
+    		float:left;
+    		margin-left: 30px;
+    	}
+    	.lblUserName{
+    		display: block;
+    		font-size:x-large;
+    		padding-bottom: 20px;
+    	}
+    	.lblUserDist{
+    		display: block;
+    		font-size:large;
+    		padding-bottom: 10px;
+    	}
+    	.lblUserElev{
+    		display: block;
+    		font-size:large;		
+    	}
+        .btnViewProf{
+            margin-top:375px;
+            
+        }

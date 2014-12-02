@@ -78,7 +78,7 @@
           <div data-role="fieldcontain" data-controltype="textinput">
               <input id="txtPass" type="password" placeholder="Password" value="">
           </div>
-          <input id="btnLogin" type="submit" value="Submit" data-theme="c">
+          <input class="submitBtn" id="btnLogin" type="submit" value="Submit" data-theme="c">
           <div>
               <a class="centerText" href="http://ridewithgps.com" target="_blank" data-transition="slideup">
                   Forgot Password?
@@ -133,6 +133,37 @@
                   </ul>
               </div>
           </div>
+          <div data-controltype="htmlblock">
+              <div>
+                  <div class="imgDiv">
+                      <img id="userImg" style="width: 100px; height: 100px;">
+                  </div>
+                  <div class="lblDiv">
+                      <div class="txtNameDiv">
+                          <label class="lblUserName" id="lblName">
+                          </label>
+                      </div>
+                      <div class="txtDistDiv">
+                          <label class="lblUserDist" id="lblUserDis">
+                          </label>
+                      </div>
+                      <div class="txtElevDiv">
+                          <label class="lblUserElev" id="lblUserEle">
+                          </label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <ul data-role="listview" data-inset="true" data-divider-theme="c">
+              <li role="heading" data-role="list-divider">
+                  Invites
+              </li>
+              <li data-theme="c">
+                  <a href="" data-transition="slide">
+                      Button
+                  </a>
+              </li>
+          </ul>
       </div>
   </div>
   <div id="RoutesPage" data-role="page" data-control-title="Routes">
@@ -175,7 +206,7 @@
                           </a>
                       </li>
                       <li>
-                          <a id="btnSignOut" onclick="SignOut();" href="#">
+                          <a id="btnSignOut" href="#">
                               Sign Out
                           </a>
                       </li>
@@ -266,7 +297,7 @@
                           Choose an Option
                       </li>
                       <li>
-                          <a href="#" data-transition="flip">
+                          <a href="#HomePage" data-transition="flip">
                               Home
                           </a>
                       </li>
@@ -372,7 +403,7 @@
                           Choose an Option
                       </li>
                       <li>
-                          <a href="#" data-transition="flip">
+                          <a href="#HomePage" data-transition="flip">
                               Home
                           </a>
                       </li>
@@ -400,11 +431,11 @@
               </div>
           </div>
           <div data-controltype="htmlblock">
-              <div id="map-canvas" style="margin: 0px; padding: 0px; width: 100%; height: 350px; position: absolute;">
+              <div id="map-canvas" style="margin: 0px; padding: 0px; width: 95%; height: 350px; display: block; position: absolute;">
               </div>
           </div>
-          <a id="btnGradient" href="#" data-role="button" data-theme="c" data-transition="none"
-          data-inline="true">
+          <a class="btnViewProf" id="btnGradient" href="#" data-role="button" data-theme="c"
+          data-transition="none" data-inline="true">
               View Profile
           </a>
       </div>
@@ -433,7 +464,7 @@
                           Choose an Option
                       </li>
                       <li>
-                          <a href="#" data-transition="flip">
+                          <a href="#HomePage" data-transition="flip">
                               Home
                           </a>
                       </li>
