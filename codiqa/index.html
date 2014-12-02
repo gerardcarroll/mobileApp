@@ -16,19 +16,19 @@
   <script src="js/jquery-1.9.1.min.js"></script>
   <script src="js/jquery.mobile-1.3.1.min.js"></script>
   <script src="js/codiqa.ext.min.js"></script>
-  <script src="js/chain-gang.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.8/jquery.jqplot.min.js"></script>
   <script src="http://cdn.jsdelivr.net/jqplot/1.0.8/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
   <script src="http://cdn.jsdelivr.net/jqplot/1.0.8/plugins/jqplot.canvasTextRenderer.min.js"></script>
+  <script src="js/chain-gang.js"></script>
 </head>
 <body>
   <div id="loginPage" data-role="page" data-control-title="Login">
       <div data-role="content">
           <div data-controltype="htmlblock">
-              <div data-role="header" data-position="fixed" data-theme="c">
-                  <a class="ui-btn-right" id="btnMenu" href="#loginPopupMenu" data-role="button"
-                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
-                  data-rel="popup" data-position-to="window">
+              <div class="mainHeader" data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-right" id="btnMenu" href="#loginPopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -80,7 +80,7 @@
           </div>
           <input id="btnLogin" type="submit" value="Submit" data-theme="c">
           <div>
-              <a class="centerText" href="http://ridewithgps.com" data-transition="slideup">
+              <a class="centerText" href="http://ridewithgps.com" target="_blank" data-transition="slideup">
                   Forgot Password?
               </a>
           </div>
@@ -89,10 +89,10 @@
   <div id="HomePage" data-role="page" data-control-title="Home">
       <div data-role="content">
           <div data-controltype="htmlblock">
-              <div data-role="header" data-position="fixed" data-theme="c">
-                  <a class="ui-btn-right" id="btnMenu" href="#HomePopupMenu" data-role="button"
-                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
-                  data-rel="popup" data-position-to="window">
+              <div class="mainHeader" data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-right" id="btnMenu" href="#HomePopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -138,10 +138,10 @@
   <div id="RoutesPage" data-role="page" data-control-title="Routes">
       <div data-role="content">
           <div data-controltype="htmlblock">
-              <div data-role="header" data-position="fixed" data-theme="c">
-                  <a class="ui-btn-right" id="btnMenu" href="#RoutesPopupMenu" data-role="button"
-                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
-                  data-rel="popup" data-position-to="window">
+              <div class="mainHeader" data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-right" id="btnMenu" href="#RoutesPopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -183,7 +183,8 @@
               </div>
           </div>
           <div data-controltype="htmlblock">
-              <ul id="lstRoutes" data-role="listview" data-inset="true" data-divider-theme="c">
+              <ul class="routes" id="lstRoutes" data-role="listview" data-inset="true"
+              data-divider-theme="c">
               </ul>
           </div>
       </div>
@@ -191,10 +192,10 @@
   <div id="CyclistsPage" data-role="page" data-control-title="Cyclists">
       <div data-role="content">
           <div data-controltype="htmlblock">
-              <div data-role="header" data-position="fixed" data-theme="c">
-                  <a class="ui-btn-right" id="btnMenu" href="#CyclistsPopupMenu" data-role="button"
-                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
-                  data-rel="popup" data-position-to="window">
+              <div class="mainHeader" data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-right" id="btnMenu" href="#CyclistsPopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -245,13 +246,13 @@
   <div id="CyclistPage" data-role="page" data-control-title="Cyclist">
       <div data-role="content">
           <div data-controltype="htmlblock">
-              <div data-role="header" data-position="fixed" data-theme="c">
+              <div class="mainHeader" data-role="header" data-position="fixed" data-theme="c">
                   <a class="ui-btn-left" href="#CyclistsPage" data-role="button" data-theme="c"
                   data-iconpos="notext" data-icon="back" data-transition="slide" data-direction="reverse">
                   </a>
-                  <a class="ui-btn-right" id="btnMenu" href="#HomePopupMenu" data-role="button"
-                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
-                  data-rel="popup" data-position-to="window">
+                  <a class="ui-btn-right" id="btnMenu" href="#HomePopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -302,10 +303,10 @@
   <div id="FriendsPage" data-role="page" data-control-title="Friends">
       <div data-role="content">
           <div data-controltype="htmlblock">
-              <div data-role="header" data-position="fixed" data-theme="c">
-                  <a class="ui-btn-right" id="btnMenu" href="#FriendsPopupMenu" data-role="button"
-                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
-                  data-rel="popup" data-position-to="window">
+              <div class="mainHeader" data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-right" id="btnMenu" href="#FriendsPopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -351,13 +352,13 @@
   <div id="RouteDetailPage" data-role="page" data-control-title="Route Detail">
       <div data-role="content">
           <div data-controltype="htmlblock">
-              <div data-role="header" data-position="fixed" data-theme="c">
-                  <a href="#RoutesPage" data-role="button" data-theme="c" data-icon="back"
-                  data-transition="slideup">
+              <div class="mainHeader" data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-left" href="#RoutesPage" data-role="button" data-theme="c"
+                  data-iconpos="notext" data-icon="back" data-transition="slide" data-direction="reverse">
                   </a>
-                  <a class="ui-btn-right" id="btnMenu" href="#RouteDetailPopupMenu" data-role="button"
-                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
-                  data-rel="popup" data-position-to="window">
+                  <a class="ui-btn-right" id="btnMenu" href="#RouteDetailPopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -411,10 +412,13 @@
   <div id="RouteProfilePage" data-role="page" data-control-title="Route Profile">
       <div data-role="content">
           <div data-controltype="htmlblock">
-              <div data-role="header" data-position="fixed" data-theme="c">
-                  <a class="ui-btn-right" id="btnMenu" href="#RouteProfilePopupMenu" data-role="button"
-                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
-                  data-rel="popup" data-position-to="window">
+              <div class="mainHeader" data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-left" href="#RouteDetailPage" data-role="button" data-theme="c"
+                  data-iconpos="notext" data-icon="back" data-transition="slide" data-direction="reverse">
+                  </a>
+                  <a class="ui-btn-right" id="btnMenu" href="#RouteProfilePopupMenu" data-rel="popup"
+                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
+                  data-transition="slideup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -457,10 +461,8 @@
               </div>
           </div>
           <div data-controltype="htmlblock">
-          	
-              <div id="chartdiv">
+              <div id="chartdiv" style="width: 100%; height: 100%;">
               </div>
-            
           </div>
       </div>
   </div>
