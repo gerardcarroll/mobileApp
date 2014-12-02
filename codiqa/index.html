@@ -26,9 +26,9 @@
       <div data-role="content">
           <div data-controltype="htmlblock">
               <div class="mainHeader" data-role="header" data-position="fixed" data-theme="c">
-                  <a class="ui-btn-right" id="btnMenu" href="#loginPopupMenu" data-rel="popup"
-                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
-                  data-transition="slideup" data-position-to="window">
+                  <a class="ui-btn-right" id="btnMenu" href="#loginPopupMenu" data-role="button"
+                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
+                  data-rel="popup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -90,9 +90,9 @@
       <div data-role="content">
           <div data-controltype="htmlblock">
               <div class="mainHeader" data-role="header" data-position="fixed" data-theme="c">
-                  <a class="ui-btn-right" id="btnMenu" href="#HomePopupMenu" data-rel="popup"
-                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
-                  data-transition="slideup" data-position-to="window">
+                  <a class="ui-btn-right" id="btnMenu" href="#HomePopupMenu" data-role="button"
+                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
+                  data-rel="popup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -154,25 +154,83 @@
                   </div>
               </div>
           </div>
-          <ul data-role="listview" data-inset="true" data-divider-theme="c">
-              <li role="heading" data-role="list-divider">
-                  Invites
-              </li>
-              <li data-theme="c">
-                  <a href="" data-transition="slide">
-                      Button
-                  </a>
-              </li>
-          </ul>
+          <div class="collapseDiv" data-controltype="htmlblock">
+              <div data-role="collapsible" data-inset="true" data-collapsed="false">
+                  <h3>
+                      Invites
+                  </h3>
+                  <ul id="inviteList" data-role="listview">
+                      <li class="inviteClass">
+                          <a id="invite1" onclick="ShowInvite(id)" href="#">
+                              <h2>
+                                  Sligo Hilly - Timothy Tiend
+                              </h2>
+                              <p>
+                                  <strong>
+                                      Saturday 22nd Nov 9am
+                                  </strong>
+                              </p>
+                          </a>
+                      </li>
+                      <li class="inviteClass">
+                          <a id="invite2" onclick="ShowInvite(id)" href="#">
+                              <h2>
+                                  Leitrim Route - Hugh Stone
+                              </h2>
+                              <p>
+                                  <strong>
+                                      Saturday 29nd Nov 10am
+                                  </strong>
+                              </p>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- /collapsible -->
+              <div data-role="collapsible" data-inset="true" data-collapsed="false">
+                  <h3>
+                      Next Chain Gangs
+                  </h3>
+                  <ul class="nextChain" id="nextList" data-role="listview">
+                      <li class="nextClass">
+                          <a id="chain1" onclick="ShowNext(id)" href="#">
+                              <h2>
+                                  Leitrim Route
+                              </h2>
+                              <p>
+                                  <strong>
+                                      Saturday 22nd Nov 10am
+                                  </strong>
+                              </p>
+                              <p>
+                                  Creator: Kris Godby
+                              </p>
+                              <p class="ui-li-aside">
+                                  Going: 4
+                              </p>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- /collapsible -->
+              <div data-role="collapsible" data-inset="true" data-collapsed="false">
+                  <h3>
+                      Latest Cycles
+                  </h3>
+                  <ul id="latestList" data-role="listview">
+                  </ul>
+              </div>
+              <!-- /collapsible -->
+          </div>
       </div>
   </div>
   <div id="RoutesPage" data-role="page" data-control-title="Routes">
       <div data-role="content">
           <div data-controltype="htmlblock">
               <div class="mainHeader" data-role="header" data-position="fixed" data-theme="c">
-                  <a class="ui-btn-right" id="btnMenu" href="#RoutesPopupMenu" data-rel="popup"
-                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
-                  data-transition="slideup" data-position-to="window">
+                  <a class="ui-btn-right" id="btnMenu" href="#RoutesPopupMenu" data-role="button"
+                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
+                  data-rel="popup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -224,9 +282,9 @@
       <div data-role="content">
           <div data-controltype="htmlblock">
               <div class="mainHeader" data-role="header" data-position="fixed" data-theme="c">
-                  <a class="ui-btn-right" id="btnMenu" href="#CyclistsPopupMenu" data-rel="popup"
-                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
-                  data-transition="slideup" data-position-to="window">
+                  <a class="ui-btn-right" id="btnMenu" href="#CyclistsPopupMenu" data-role="button"
+                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
+                  data-rel="popup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -281,9 +339,9 @@
                   <a class="ui-btn-left" href="#CyclistsPage" data-role="button" data-theme="c"
                   data-iconpos="notext" data-icon="back" data-transition="slide" data-direction="reverse">
                   </a>
-                  <a class="ui-btn-right" id="btnMenu" href="#HomePopupMenu" data-rel="popup"
-                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
-                  data-transition="slideup" data-position-to="window">
+                  <a class="ui-btn-right" id="btnMenu" href="#HomePopupMenu" data-role="button"
+                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
+                  data-rel="popup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -335,9 +393,9 @@
       <div data-role="content">
           <div data-controltype="htmlblock">
               <div class="mainHeader" data-role="header" data-position="fixed" data-theme="c">
-                  <a class="ui-btn-right" id="btnMenu" href="#FriendsPopupMenu" data-rel="popup"
-                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
-                  data-transition="slideup" data-position-to="window">
+                  <a class="ui-btn-right" id="btnMenu" href="#FriendsPopupMenu" data-role="button"
+                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
+                  data-rel="popup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -387,9 +445,9 @@
                   <a class="ui-btn-left" href="#RoutesPage" data-role="button" data-theme="c"
                   data-iconpos="notext" data-icon="back" data-transition="slide" data-direction="reverse">
                   </a>
-                  <a class="ui-btn-right" id="btnMenu" href="#RouteDetailPopupMenu" data-rel="popup"
-                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
-                  data-transition="slideup" data-position-to="window">
+                  <a class="ui-btn-right" id="btnMenu" href="#RouteDetailPopupMenu" data-role="button"
+                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
+                  data-rel="popup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang
@@ -447,9 +505,9 @@
                   <a class="ui-btn-left" href="#RouteDetailPage" data-role="button" data-theme="c"
                   data-iconpos="notext" data-icon="back" data-transition="slide" data-direction="reverse">
                   </a>
-                  <a class="ui-btn-right" id="btnMenu" href="#RouteProfilePopupMenu" data-rel="popup"
-                  data-role="button" data-theme="c" data-iconpos="notext" data-icon="bars"
-                  data-transition="slideup" data-position-to="window">
+                  <a class="ui-btn-right" id="btnMenu" href="#RouteProfilePopupMenu" data-role="button"
+                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
+                  data-rel="popup" data-position-to="window">
                   </a>
                   <h3>
                       Chain Gang

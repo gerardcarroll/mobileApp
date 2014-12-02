@@ -60,7 +60,9 @@ var user = {Id:"", Name:"", Auth:"", TotDist:"", TotEle:"", Img:""};
                 });
                 
                 $( document ).on( "pageshow", "#HomePage", function() {
-                	
+                	$("#btnInvites").attr('data-collapsed','false');
+                    $("#btnNextChain").attr('data-collapsed','false');
+                    $("#btnLatest").attr('data-collapsed','false');
                 });
                 
                 $( document ).on( "pageshow", "#RoutesPage", function() {
@@ -208,3 +210,22 @@ var user = {Id:"", Name:"", Auth:"", TotDist:"", TotEle:"", Img:""};
                 		axes:{ xaxis:{ label:'Distance (km)', pad:0}, yaxis:{ label:'Elevation (m)', pad:0}}
                      }).replot();
                 });
+                
+                function ShowInvite(id){
+                    if(id == "invite1")
+					{
+						ShowRoute(6572214);
+					}
+					else
+					{
+						ShowRoute(6573629);
+					}
+                }
+				
+				function ShowNext(id){
+                    alert(id);   
+                }
+				
+				function ShowLatest(id){
+                    alert(id);   
+                }

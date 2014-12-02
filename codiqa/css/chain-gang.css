@@ -33,8 +33,9 @@
     	}
     	.lblUserName{
     		display: block;
-    		font-size:medium;
+    		font-size:large;
     		padding-bottom: 20px;
+			font-weight:bold;
     	}
     	.lblUserDist{
     		display: block;
@@ -48,4 +49,20 @@
         .btnViewProf{
             margin-top:375px;
             
+        }
+        .collapseDiv{
+            margin-top:175px;
+        }
+        
+        .inviteClass{
+            background: #FFE599;
+            text-shadow: none;
+        }
+         .nextClass{
+            background: #B6D7A8;
+            text-shadow: none;
+        }
+         .latestClass{
+            background: #A2C4C9;
+            text-shadow: none;
         }
