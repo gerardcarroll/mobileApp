@@ -17,6 +17,7 @@
   <script src="js/jquery.mobile-1.3.1.min.js"></script>
   <script src="js/codiqa.ext.min.js"></script>
   <script src="js/chain-gang.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jqPlot/1.0.8/jquery.jqplot.min.js"></script>
 </head>
 <body>
   <div id="loginPage" data-role="page" data-control-title="Login">
@@ -349,6 +350,9 @@
       <div data-role="content">
           <div data-controltype="htmlblock">
               <div data-role="header" data-position="fixed" data-theme="c">
+                  <a href="#RoutesPage" data-role="button" data-theme="c" data-icon="back"
+                  data-transition="slideup">
+                  </a>
                   <a class="ui-btn-right" id="btnMenu" href="#RouteDetailPopupMenu" data-role="button"
                   data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
                   data-rel="popup" data-position-to="window">
@@ -393,7 +397,65 @@
               </div>
           </div>
           <div data-controltype="htmlblock">
-              <div id="map-canvas" style="margin: 0px; padding: 0px; width: 300px; height: 300px; position: absolute;">
+              <div id="map-canvas" style="margin: 0px; padding: 0px; width: 100%; height: 350px; position: absolute;">
+              </div>
+          </div>
+          <a id="btnGradient" href="#" data-role="button" data-theme="c" data-transition="none"
+          data-inline="true">
+              View Profile
+          </a>
+      </div>
+  </div>
+  <div id="RouteProfilePage" data-role="page" data-control-title="Route Profile">
+      <div data-role="content">
+          <div data-controltype="htmlblock">
+              <div data-role="header" data-position="fixed" data-theme="c">
+                  <a class="ui-btn-right" id="btnMenu" href="#RouteProfilePopupMenu" data-role="button"
+                  data-theme="c" data-iconpos="notext" data-icon="bars" data-transition="slideup"
+                  data-rel="popup" data-position-to="window">
+                  </a>
+                  <h3>
+                      Chain Gang
+                  </h3>
+              </div>
+              <div class="popupCenter" id="RouteProfilePopupMenu" data-role="popup"
+              data-theme="c">
+                  <!--<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow
+                  ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>-->
+                  <ul style="min-width: 210px;" data-role="listview" data-theme="c" data-inset="true">
+                      <li data-role="list-divider">
+                          Choose an Option
+                      </li>
+                      <li>
+                          <a href="#" data-transition="flip">
+                              Home
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#RoutesPage" data-transition="flip">
+                              Routes
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#FriendsPage" data-transition="flip">
+                              Friends
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#CyclistsPage" data-transition="flip">
+                              Find Cyclists
+                          </a>
+                      </li>
+                      <li>
+                          <a id="btnSignOut" href="#">
+                              Sign Out
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div data-controltype="htmlblock">
+              <div id="chartdiv" style="width: 100%; height: 100%;">
               </div>
           </div>
       </div>
