@@ -35,7 +35,7 @@
     		display: block;
     		font-size:large;
     		padding-bottom: 20px;
-			font-weight:bold;
+            font-weight:bold;
     	}
     	.lblUserDist{
     		display: block;
@@ -65,4 +65,9 @@
          .latestClass{
             background: #A2C4C9;
             text-shadow: none;
+        }
+        
+        .lstImages{
+            height:80px;
+            width:80px;
         }

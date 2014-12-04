@@ -212,20 +212,9 @@ var user = {Id:"", Name:"", Auth:"", TotDist:"", TotEle:"", Img:""};
                 });
                 
                 function ShowInvite(id){
-                    if(id == "invite1")
-					{
-						ShowRoute(6572214);
-					}
-					else
-					{
-						ShowRoute(6573629);
-					}
-                }
-				
-				function ShowNext(id){
                     alert(id);   
                 }
-				
-				function ShowLatest(id){
+                
+                function ShowCyclist(id){
                     alert(id);   
                 }
