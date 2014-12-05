@@ -47,8 +47,12 @@
     		font-size:medium;		
     	}
         .btnViewProf{
-            margin-top:375px;
+           /* margin-top:375px;*/
             
+        }
+        .mapTexts{
+            margin-top:375px;
+        
         }
         .collapseDiv{
             margin-top:175px;
